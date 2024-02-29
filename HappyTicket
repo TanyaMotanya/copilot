@@ -1,24 +1,12 @@
-#Программа по определению счастливого билета
+print('Проверьте, является ли номер билета счастливым')
+print('Введите номер билета')
+input()
 def is_happy_ticket(number):
-    # Проверяем, что число четное
-    if number % 2 != 0:
-        return False
-
-    # Разделяем число на две части
-    half_length = len(str(number)) // 2
-    first_half = str(number)[:half_length]
-    second_half = str(number)[half_length:]
-
-    # Суммируем цифры первой и второй половины числа
-    sum_first_half = sum(int(digit) for digit in first_half)
-    sum_second_half = sum(int(digit) for digit in second_half)
-
-    # Проверяем, равны ли суммы
-    if sum_first_half == sum_second_half:
-        return True
+    number = input()
+    happy_ticket = int(number)
+    fisrt_half = n[0] + n[1] + n[2]
+    second_half = n[3] + n[4] + n[5]
+    if fisrt_half == second_half:
+        print('Счастливый')
     else:
-        return False
-
-# Пример использования
-print(is_happy_ticket(1230))  # False
-print(is_happy_ticket(1221))  # True
+        print('Не счастливый')
