@@ -1,12 +1,21 @@
-print('Проверьте, является ли номер билета счастливым')
-print('Введите номер билета')
-input()
+print('Хотите проверить, счастливый ли билет?')
 def is_happy_ticket(number):
-    number = input()
-    happy_ticket = int(number)
-    fisrt_half = n[0] + n[1] + n[2]
-    second_half = n[3] + n[4] + n[5]
-    if fisrt_half == second_half:
-        print('Счастливый')
+    number_int = int(number)
+    if number_int % 2 == 0
+        print('Четное число')
     else:
-        print('Не счастливый')
+        print('Число не четное, введите другое число')
+        
+    half_happy_ticket = len(number) // 2
+    a = number[:half_happy_ticket]
+    b = number[half_happy_ticket:]
+    
+    first_half = (sum(int(x) for x in a))
+    second_half = (sum(int(x) for x in b))
+    
+    if first_half == second_half:
+        return ('Билет счастливый')
+    else:
+        return  ('Билет не счастливый')
+    
+print(is_happy_ticket(input('Введите номер билета ')))
