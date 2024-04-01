@@ -1,0 +1,13 @@
+def fib(ordinal_number):
+    ordinal_number_int = int(ordinal_number)
+    fib1 = 0
+    fib2 = 1
+    index = 0
+    while index < ordinal_number_int - 1:
+        fib_sum = fib1 + fib2
+        fib1 = fib2
+        fib2 = fib_sum
+        index = index + 1
+    return fib2
+    
+print(fib(input('Введите порядковый номер ')))
