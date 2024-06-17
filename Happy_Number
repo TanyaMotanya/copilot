@@ -1,0 +1,14 @@
+def sum_of_square_digits(number):
+    return sum(int(x) ** 2 for x in str(number))
+
+
+def is_happy_number(number: int) -> bool:
+    for _ in range(10):
+        next_squares_sum = sum_of_square_digits(number)
+        if next_squares_sum == 1:
+            return True
+        number = next_squares_sum
+    return False
+
+
+assert is_happy_number(7)
