@@ -1,3 +1,7 @@
+color1 = str(input('Введите код цвета в 16-ричной системе '))
+color2 = str(input('Введите код цвета в 16-ричной системе '))
+color3 = str(input('Введите код цвета в 16-ричной системе '))
+
 def color_magic(color1, color2, color3):
     # Удаляем символ "#" и преобразуем цвета в числа
     color1 = int(color1[1:], 16)
@@ -11,11 +15,6 @@ def color_magic(color1, color2, color3):
     sub_binar = bin(color1 - color2 - color3)
 
     return summa_hex, sub_binar
-
-# Пример ввода от пользователя
-color1 = "#b08fba"
-color2 = "#108fff"
-color3 = "#c011da"
 
 # Вызов функции и вывод результатов
 summa_hex, sub_binar = color_magic(color1, color2, color3)
